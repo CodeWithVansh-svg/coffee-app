@@ -4,30 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Good Morning Coffee</title>
+
   <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <main class="page">
 
     <section class="coffee-scene">
 
+      <img
+        src="./coffee-background.png"
+        class="background-image"
+        alt="Beautiful illustrated coffee shop"
+      >
+
       <div class="scene-content">
 
         <h1>GOOD MORNING</h1>
 
         <div class="coffee-panel">
-          <button onclick="showCoffee('Latte')">
+
+          <button onclick="selectCoffee('Latte')">
             Latte
           </button>
 
-          <button onclick="showCoffee('Cappuccino')">
+          <button onclick="selectCoffee('Cappuccino')">
             Cappuccino
           </button>
+
         </div>
 
       </div>
@@ -37,8 +50,8 @@
   </main>
 
   <script>
-    function showCoffee(name) {
-      alert("You selected " + name + "!");
+    function selectCoffee(name) {
+      alert("You selected " + name + " ☕");
     }
   </script>
 
