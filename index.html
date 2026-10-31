@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Morning Coffee</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="page">
+
+    <section class="coffee-scene">
+
+      <div class="scene-content">
+
+        <h1>GOOD MORNING</h1>
+
+        <div class="coffee-panel">
+          <button onclick="showCoffee('Latte')">
+            Latte
+          </button>
+
+          <button onclick="showCoffee('Cappuccino')">
+            Cappuccino
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    function showCoffee(name) {
+      alert("You selected " + name + "!");
+    }
+  </script>
+
+</body>
+</html>
