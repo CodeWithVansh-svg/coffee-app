@@ -1,0 +1,133 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fffbed;
+  min-height: 100vh;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 12px 0;
+}
+
+/* Main portrait image */
+
+.coffee-scene {
+  position: relative;
+  width: 100%;
+  max-width: 424px;
+  min-height: 100vh;
+  height: 1100px;
+
+  background-image: url("./coffee-shop.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+/* Overlay content */
+
+.scene-content {
+  position: absolute;
+  top: 41.5%;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Main heading */
+
+h1 {
+  color: #fffaf0;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: center;
+
+  text-shadow: 0 2px 5px rgba(0,0,0,.2);
+
+  margin-bottom: 30px;
+}
+
+/* Translucent button container */
+
+.coffee-panel {
+  width: 304px;
+  min-height: 98px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  background: rgba(255,255,255,.87);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Buttons */
+
+.coffee-panel button {
+  background: #fff;
+  border: 1px solid #eeeeee;
+  border-radius: 9px;
+
+  padding: 17px 15px;
+
+  color: #17100c;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 3px 7px rgba(0,0,0,.09);
+
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.coffee-panel button:hover {
+  transform: translateY(-3px);
+  background: #f9f5ef;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 450px) {
+
+  .page {
+    padding: 0;
+  }
+
+  .coffee-scene {
+    max-width: 100%;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: clamp(25px, 7.5vw, 32px);
+  }
+
+  .coffee-panel {
+    width: min(304px, 85%);
+  }
+}
